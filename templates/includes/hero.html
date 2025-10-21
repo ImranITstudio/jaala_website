@@ -1,0 +1,27 @@
+{% load static %}
+<!-- Hero Section -->
+<section id="hero" class="hero section dark-background">
+  <!-- <img src="{% static 'img/hero-bg.jpg' %}" alt="" data-aos="fade-in" />  -->
+
+   <!-- The HTML5 video element that will create the background video on the header -->
+  <video class="position-absolute end-0 bottom-0 h-auto w-auto"playsinline="playsinline" autoplay="autoplay" muted="muted" loop="loop">
+    <source src="{% static 'img/jaala-video.mp4' %}" type="video/mp4">
+  </video>
+
+  <div class="container d-flex flex-column align-items-center position-absolute">
+    <h2 data-aos="fade-up" data-aos-delay="100">PLAN. LAUNCH. GROW.</h2>
+    <p data-aos="fade-up" data-aos-delay="200">
+      Your digital evolution, guided by three phases: Plan. Launch. Grow.
+
+    </p>
+    <div class="d-flex mt-4" data-aos="fade-up" data-aos-delay="300">
+      <a href="#about" class="btn-get-started">Get Started</a>
+      <a
+        href="https://www.youtube.com/watch?v=Y7f98aduVJ8"
+        class="glightbox btn-watch-video d-flex align-items-center"
+        ><i class="bi bi-play-circle"></i><span>Watch Video</span></a
+      >
+    </div>
+  </div>
+</section>
+<!-- /Hero Section -->

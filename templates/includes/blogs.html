@@ -1,0 +1,46 @@
+{% load static %}
+
+
+<!-- blog Section -->
+<section id="blogs" class="team section light-background" >
+  
+  <!-- Section Title -->
+  <div class="container section-title">
+    <h2>Blogs Section</h2>
+    <p>CHECK OUR BLOGS</p>
+  </div>
+  <!-- End Section Title -->
+
+  <div class="container">
+    <div class="row gy-5">
+      {% for blog in latest_blogs %}
+      <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+        <div class="member">
+          <div class="pic" >
+           <img src="{{blog.thumbnail_image.url}}" class="img-fluid" alt="Shopify" /> 
+            
+          </div>
+          <div class="member-info" data-aos="fade-up">
+            <h3>{{ blog.title }}</h3>
+            
+            <span
+              >By {{ blog.author }} | [{{ blog.date|date:"d-m-Y" }}] | E-commerce, Shopify, Shopify
+              Plus, Digital Strategy</span
+            >
+            
+            <div class="social">
+              <a href=""><i class="bi bi-twitter-x"></i></a>
+              <a href=""><i class="bi bi-facebook"></i></a>
+              <a href=""><i class="bi bi-instagram"></i></a>
+              <a href=""><i class="bi bi-linkedin"></i></a>
+            </div>
+          </div>
+        </div>
+      </div>
+      {% endfor  %}
+     
+
+  </div>
+</section>
+<!-- /Team Section -->
+  
