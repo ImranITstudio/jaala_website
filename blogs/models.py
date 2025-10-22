@@ -11,6 +11,7 @@ class Blog(models.Model):
     content = models.TextField()
     banner_image = models.ImageField(upload_to='blog_banners/', blank=True, default='fallback.png')
     thumbnail_image = models.ImageField(upload_to='blog_thumbnails/', blank=True, default='fallback_thumb.png')
+    read_time = models.IntegerField(blank=True, default=5)  # in minutes
 
     def __str__(self):
         return self.title

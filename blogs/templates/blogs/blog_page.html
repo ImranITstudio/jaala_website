@@ -1,0 +1,39 @@
+{% extends 'base.html' %} 
+{% load static %} 
+{% block content %}
+<!-- Hero section -->
+{% include 'includes/blog_hero.html'%}
+<!-- End hero section -->
+
+<section>
+  <div class="container section-title" data-aos="fade-up">
+     <h2 class="mb-4">{{ blog.title }}</h2>
+    <div class="row mb-2">
+     
+      <div class="col-md-12">
+        
+        <div class="row mt-4">
+          <div class="col-md-8 col-lg-6 col-xl-8 " style="width: 50rem;">
+            
+              <img src="{{ blog.thumbnail_image.url }}" alt="{{ blog.title }}" class="img-thumbnail mb-3 mb-md-0"/>
+            
+
+          </div>
+          <div class="col-md-4 col-lg-6 col-xl-4 d-flex">
+            <div class="text w-100 pl-md-3">
+             
+				{% comment %} <p>{{ blog.title }}</p> {% endcomment %}
+				
+              <h5>{{blog.content}}</h5>  	
+              <h4>{{ blog.category }}</h4>
+              {% comment %} <h4>{{ blog.read_time }} min read</h4> {% endcomment %}
+          </div>
+
+        </div>
+
+        
+      </div>
+    </div>
+  </div>
+</section>  
+{% endblock %}

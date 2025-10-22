@@ -17,12 +17,15 @@
       <div class="col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
         <div class="member">
           <div class="pic" >
-           <img src="{{blog.thumbnail_image.url}}" class="img-fluid" alt="Shopify" /> 
+            <a href="{% url 'blogs_list' %}">
+            <img src="{{blog.thumbnail_image.url}}" class="img-fluid" alt="Shopify" /> 
+            </a>
             
           </div>
+          <a href="{% url 'blogs_list'%}">
           <div class="member-info" data-aos="fade-up">
             <h3>{{ blog.title }}</h3>
-            
+          </a>  
             <span
               >By {{ blog.author }} | [{{ blog.date|date:"d-m-Y" }}] | E-commerce, Shopify, Shopify
               Plus, Digital Strategy</span
